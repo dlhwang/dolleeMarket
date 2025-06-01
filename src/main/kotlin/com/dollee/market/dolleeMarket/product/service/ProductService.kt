@@ -1,4 +1,4 @@
-package com.dollee.market.dolleeMarket.domain.product.service
+package com.dollee.market.dolleeMarket.product.service
 
 import com.dollee.market.dolleeMarket.application.dto.ProductListResponse
 import org.springframework.stereotype.Service

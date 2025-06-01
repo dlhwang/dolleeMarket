@@ -1,7 +1,7 @@
 package com.dollee.market.dolleeMarket.adaptor
 
 import com.dollee.market.dolleeMarket.application.dto.ProductListResponse
-import com.dollee.market.dolleeMarket.domain.product.service.ProductService
+import com.dollee.market.dolleeMarket.product.service.ProductService
 import jakarta.servlet.http.HttpServletRequest
 import lombok.extern.slf4j.Slf4j
 import org.slf4j.Logger
