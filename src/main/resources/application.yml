@@ -32,7 +32,7 @@ logging:
       hibernate:
         SQL: DEBUG  # Hibernate SQL 로깅
         type: DEBUG  # SQL 바인딩된 값도 로그에 출력
-    com.estate: DEBUG
+    com.dollee: DEBUG
 
 springdoc:
   api-docs:
