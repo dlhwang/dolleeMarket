@@ -20,7 +20,7 @@ class ProductController(private val service : ProductService) {
     val log: Logger = LoggerFactory.getLogger(ProductController::class.java)
 
     @GetMapping
-    fun getCourses(request :HttpServletRequest): ResponseEntity<MutableList<ProductListResponse>> {
+    fun getProduct(request :HttpServletRequest): ResponseEntity<MutableList<ProductListResponse>> {
         log.info("{} {}", request.requestURI, request.remoteAddr)
         return ResponseEntity.ok(service.getProductList())
     }
