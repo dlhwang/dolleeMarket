@@ -1,7 +1,7 @@
 # Kotlin DDD + CQRS API 토이 프로젝트
 
-이 프로젝트는 Kotlin을 기반으로 DDD 아키텍처와 CQRS 패턴을 적용한 API 서버입니다. <br/>
-Kafka를 통해 도메인 이벤트를 발행하고, 이를 NoSQL DB(MongoDB 등)에 반영하여 확장성과 조회 성능을 강화하는 구조입니다.
+이 프로젝트는 Kotlin을 기반으로 DDD 아키텍처와 CQRS 패턴을 적용하면서 공부하고 있는 API 서버입니다. <br/>
+Kafka를 통해 도메인 이벤트를 발행하고, 이를 NoSQL DB에 반영까지 목표로 하고 있습니다.
 
 ---
 
