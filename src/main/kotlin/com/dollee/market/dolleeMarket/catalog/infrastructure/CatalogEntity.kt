@@ -12,14 +12,21 @@ class CatalogEntity (
     val id: String? = null,
     val name: String,
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn("parent_id")
     val parent: CatalogEntity? = null,
 
     @OneToMany(mappedBy = "parent")
     val children: List<CatalogEntity> = listOf(),
 
+    @Embedded
+    val description: Description,
+
+    @Embedded
+    val metadata: Metadata,
+
     val displayOrder: Int = 0,       // 노출 우선순위
-    val isActive: Boolean = true     // 사용 여부
+
 ) {
     fun toDomain(): Catalog {
         return Catalog(id!!, name, null!!) //todo
