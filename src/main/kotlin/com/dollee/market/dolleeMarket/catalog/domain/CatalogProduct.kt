@@ -1,6 +1,6 @@
 package com.dollee.market.dolleeMarket.catalog.domain
 
 class CatalogProduct (
-    val productId: String,
+    val productId: ProductId,
     val displayOrder: Int
 )
