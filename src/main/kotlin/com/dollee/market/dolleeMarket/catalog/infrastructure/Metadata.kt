@@ -7,5 +7,5 @@ data class Metadata(
     val isActive: Boolean,
     val activeDate: LocalDateTime
 ) {
-    fun toDomain(): Metadata {}
+    fun toDomain(): Metadata = Metadata(isActive, activeDate)
 }

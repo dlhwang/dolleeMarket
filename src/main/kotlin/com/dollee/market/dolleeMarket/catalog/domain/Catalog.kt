@@ -10,7 +10,7 @@ class Catalog(
     val metadata: Metadata,
     val displayOrder: DisplayOrder,
 
-    val parentId: CatalogId,
+    val parentId: CatalogId?,
     val children: List<CatalogId> = emptyList(),
     val productIds: List<ProductId> = emptyList()
 
