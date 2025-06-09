@@ -36,7 +36,7 @@ dependencies {
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    
+
     // 나노 아이디
     implementation("com.aventrix.jnanoid:jnanoid:2.0.0")
 
@@ -45,9 +45,13 @@ dependencies {
 
     compileOnly("org.projectlombok:lombok")
     annotationProcessor("org.projectlombok:lombok")
-    testImplementation("org.springframework.boot:spring-boot-starter-test")
-    testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
-    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+    testImplementation("io.kotest:kotest-runner-junit5:5.8.0")      // kotest core
+    testImplementation("io.kotest:kotest-assertions-core:5.8.0")    // assertions
+    testImplementation("io.kotest:kotest-framework-engine:5.8.0")   // engine
+    testImplementation("io.mockk:mockk:1.13.9")                      // mockk
+    testImplementation("org.springframework.boot:spring-boot-starter-test") {
+        exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
+    }
 }
 
 kotlin {
@@ -56,6 +60,6 @@ kotlin {
     }
 }
 
-tasks.withType<Test> {
+tasks.test {
     useJUnitPlatform()
 }
