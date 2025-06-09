@@ -7,5 +7,9 @@ import org.springframework.boot.runApplication
 class DolleeMarketApplication
 
 fun main(args: Array<String>) {
-	runApplication<DolleeMarketApplication>(*args)
+	try {
+		runApplication<DolleeMarketApplication>(*args)
+	} catch (e: Exception){
+		e.printStackTrace()
+	}
 }
