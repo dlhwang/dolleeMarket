@@ -14,19 +14,19 @@ class CatalogEntity (
     val name: String,
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn("parent_id")
+    @JoinColumn(name = "parent_id")
     val parent: CatalogEntity? = null,
 
     @OneToMany(mappedBy = "parent")
     val children: List<CatalogEntity> = listOf(),
 
-    @Embedded
+    @get: Embedded
     val description: Description,
 
-    @Embedded
+    @get: Embedded
     val metadata: Metadata,
 
-    @Embedded
+    @get: Embedded
     val displayOrder: DisplayOrder,       // 노출 우선순위
 
 ) {
