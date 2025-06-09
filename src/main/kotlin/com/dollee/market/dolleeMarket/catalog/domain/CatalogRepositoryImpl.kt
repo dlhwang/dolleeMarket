@@ -6,7 +6,9 @@ import org.springframework.stereotype.Repository
 @Repository
 class CatalogRepositoryImpl(private val jpaRepository: CatalogJpaRepository) : CatalogRepository {
     override fun save(catalog: Catalog): Catalog {
-        val entity = catalog.toEntity()
+        val entity = catalog.toEntity(
+            parent = TODO()
+        )
         val saved = jpaRepository.save(entity)
         return saved.toDomain()
     }

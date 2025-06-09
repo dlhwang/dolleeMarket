@@ -9,7 +9,7 @@ class CatalogService(private val repository: CatalogRepository) {
 
     fun getCatalogList() : MutableList<CatalogListResponse>{
         return repository.findAll()
-            .map { catalog -> CatalogListResponse(catalog.id) }
+            .map { catalog -> CatalogListResponse(catalog.id.toString()) }
             .toMutableList()
     }
 }
