@@ -18,7 +18,7 @@ Kafka를 통해 도메인 이벤트를 발행하고, 이를 NoSQL DB에 반영�
 - **도구**: Docker, GitHub Actions(CI/CD)
 
 ---
-gi
+
 ## 📂 프로젝트 구조
 
 ```markdown
@@ -28,3 +28,18 @@ src
 ├── infrastructure      # 인프라 계층 (JPA, Kafka, MongoDB, 외부 연동 등)
 ├── interface           # 인터페이스 계층 (Controller, Consumer 등)
 └── common              # 공통 유틸, 예외, 공통 설정 등
+```
+
+---
+## 로컬 임시 환경
+## 💾 Database H2
+- H2 Console: [http://localhost:8080/h2-console](http://localhost:8080/h2-console)
+  - **JDBC URL**: `jdbc:h2:mem:testdb`
+  - **Username**: `sa`
+  - **Password**: *(비워두기)*
+
+---
+## 🛠 API 문서 (Swagger)
+- Swagger UI: http://localhost:8080/swagger-ui/index.html
+- API 문서 (JSON): http://localhost:8080/v3/api-docs
+
