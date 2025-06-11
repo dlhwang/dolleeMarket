@@ -1,19 +1,20 @@
-package com.dollee.market.dolleeMarket.utills;
+package com.dollee.market.dolleeMarket.utills
 
-import java.io.Serial;
-import java.io.Serializable;
+import de.huxhorn.sulky.ulid.ULID
+import org.hibernate.engine.spi.SharedSessionContractImplementor
+import org.hibernate.id.IdentifierGenerator
+import java.io.Serial
+import java.io.Serializable
 
-import com.aventrix.jnanoid.jnanoid.NanoIdUtils;
-import org.hibernate.engine.spi.SharedSessionContractImplementor;
-import org.hibernate.id.IdentifierGenerator;
+class NanoIdGenerator : IdentifierGenerator, Serializable {
+    override fun generate(
+        sharedSessionContractImplementor: SharedSessionContractImplementor?, o: Any?
+    ): Serializable {
+        return ULID().nextULID()
+    }
 
-public class NanoIdGenerator implements IdentifierGenerator, Serializable {
-
-  @Serial private static final long serialVersionUID = -7858266607422294454L;
-
-  @Override
-  public Serializable generate(
-      SharedSessionContractImplementor sharedSessionContractImplementor, Object o) {
-    return NanoIdUtils.randomNanoId();
-  }
+    companion object {
+        @Serial
+        private val serialVersionUID = -7858266607422294454L
+    }
 }

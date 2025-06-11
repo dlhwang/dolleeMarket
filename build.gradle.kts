@@ -37,14 +37,15 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
-    // 나노 아이디
-    implementation("com.aventrix.jnanoid:jnanoid:2.0.0")
+    // 나노아이디 대체를 위해 ULID
+    implementation("de.huxhorn.sulky:de.huxhorn.sulky.ulid:8.3.0")
 
     // 스웨거
     implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.1")
 
     compileOnly("org.projectlombok:lombok")
     annotationProcessor("org.projectlombok:lombok")
+
     testImplementation("io.kotest:kotest-runner-junit5:5.8.0")      // kotest core
     testImplementation("io.kotest:kotest-assertions-core:5.8.0")    // assertions
     testImplementation("io.kotest:kotest-framework-engine:5.8.0")   // engine
